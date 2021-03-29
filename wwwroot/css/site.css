@@ -1,0 +1,220 @@
+﻿/* CSS Document */
+
+/* Themes */
+:root {
+    --textColor: #FFF0AA;
+    --bgColor: #282B2D;
+    --bgBorderColor: #212121;
+}
+
+:root.red {
+    --textColor: #FFAAAA;
+    --bgColor: #550000;
+    --bgBorderColor: #AA3939;
+}
+
+:root.green {
+    --textColor: #A1D890;
+    --bgColor: #114800;
+    --bgBorderColor: #479030;
+}
+
+:root.blue {
+    --textColor: #7887Ab;
+    --bgColor: #061539;
+    --bgBorderColor: #2E4272;
+}
+
+/* Main */
+html {
+    height: 80%;
+}
+
+a {
+    color: var(--textColor);
+    text-decoration: none;
+    transition: 1s;
+}
+
+body {
+    color: #FFF0AA;
+    background-color: #282B2D;
+    font: 1.0em arial;
+    top: 40px;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    overflow-y: scroll;
+}
+
+header {
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin: auto;
+    position: fixed;
+    border-bottom: 6px solid var(--bgBorderColor);
+    z-index: 1;
+    transition: 1s;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.6em;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.content {
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    border: 6px solid var(--bgBorderColor);
+    border-radius: 6px 6px 0 0;
+    padding: 10px;
+    width: 90%;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 1s;
+    margin: auto;
+}
+
+.contentBody {
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    border: 6px solid var(--bgBorderColor);
+    border-radius: 0 0 6px 6px;
+    padding: 10px;
+    display: none;
+    overflow: hidden;
+    border-top: 0;
+    border-right: 6px solid var(--bgBorderColor);
+    border-bottom: 6px solid var(--bgBorderColor);
+    border-left: 6px solid var(--bgBorderColor);
+    width: 90%;
+    margin: auto;
+    transition: 1s;
+}
+
+.todoheader {
+    width: 90%;
+    margin: auto;
+    white-space: nowrap;
+}
+
+.todolist {
+    width: 90%;
+    margin: auto;
+}
+
+.footer {
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 1;
+    transition: 1s;
+    border-top: 6px solid var(--bgBorderColor);
+    text-align: center;
+}
+
+/* Theme Changer Dropdown */
+.dropdown {
+    background: transparent;
+    padding: 10px;
+    border: 0;
+    -webkit-appearance: none;
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    outline: 0;
+    transition: 1s;
+    margin: auto;
+    width: 20%;
+}
+
+/* Text Box*/
+input[type=text], select {
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 6px solid var(--bgBorderColor);
+    border-left: 0;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: 0;
+    -webkit-appearance: none;
+    font: 1.0em arial;
+    transition: 1s;
+    display: inline;
+}
+
+/* Add Button */
+.addBtn {
+    color: #00FF00;
+    background-color: var(--bgColor);
+    border: none;
+    cursor: pointer;
+    transition: 1s;
+    outline: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    display: inline;
+}
+
+.addBtn:hover {
+    color: #00FF00;
+    background-color: var(--bgColor);
+    border: none;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* Close button */
+.close {
+    color: #FF0000;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: #FF0000;
+    background-color: var(--bgColor);
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* Style the list items */
+ul li {
+    background-color: var(--bgColor);
+    cursor: pointer;
+    position: relative;
+    padding: 12px 20px;
+    list-style-type: square;
+    transition: 1s;
+}
+
+/* When clicked on, reduce opacity and strike out text */
+ul li.checked {
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    text-decoration: line-through;
+    opacity: 0.2;
+}
+

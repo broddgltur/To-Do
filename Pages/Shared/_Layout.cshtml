@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a asp-area="" asp-page="/Index">To-Do</a>
+        </div>
+    </header>
+
+    <br /><br />
+
+    @RenderBody()
+
+    <footer class="footer">
+        <label id="theme-changer" class="hidden">
+            <select name="theme" id="theme" class="dropdown">
+                <option value="">Default Theme</option>
+                <option value="red">Red Theme</option>
+                <option value="green">Green Theme</option>
+                <option value="blue">Blue Theme</option>
+            </select>
+        </label>
+    </footer>
+
+    <script src="./js/themeChanger.js"></script>
+    <script src="./js/todo.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

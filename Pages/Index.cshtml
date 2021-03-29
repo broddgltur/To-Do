@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<p class="content">Get started below</p>
+
+<div class="contentBody" style="display: block">
+
+    <div class="todoheader">
+        <input type="text" id="myInput" placeholder="Enter a to do here...">
+        <button id="myBtn" onclick="newElement()" class="addBtn">+</button>
+    </div>
+
+    <div class="todolist">
+        <ul id="todolist">
+            <li class="checked">Brew coffee</li>
+            <li>Feed the horses</li>
+            <li>Muck the stalls</li>
+            <li>Water animals</li>
+            <li>Collect eggs</li>
+            <li>Drink coffee</li>
+        </ul>
+    </div>
+
+</div>
+
+<br />
+<br />
+<br />
+<br />
